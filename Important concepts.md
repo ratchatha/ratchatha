@@ -298,7 +298,7 @@ void main() {
 
 ### เปรียบเทียบการเขียนในภาษาอื่นๆ
 
-- Java
+1. Java
 
 ```java
 class Point {
