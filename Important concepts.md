@@ -182,7 +182,7 @@ void main() {
 
 
 
-### Access Modifiers 
+## Access Modifiers 
 คือการกำหนดระดับในการเข้าถึงของ คลาส แอตทริบิวต์ เมธอด โดยมีประโยชน์ในเรื่องของสิทธิในการเข้าใช้งาน และการซ้อนข้อมูล
 
 
@@ -294,4 +294,34 @@ void main() {
   p1._x = 100;
   p1._y = 200;
 }
+```
+
+### เปรียบเทียบการเขียนในภาษาอื่นๆ
+
+-- Java
+
+```java
+class Point {
+  int _x = 0; //กำหนดให้ x เป็น private
+  int _y = 0; //กำหนดให้ ั เป็น private
+
+  Point({int x = 0, int y = 0}) { //c
+    this._x = x;
+    this._y = y; 
+  }
+  show() {
+    print('Point(x=$_x,y=$_y)');
+  }
+}
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+}
+```
+
+- Output
+  
+```dart
+Point(x=10,y=20)
 ```
