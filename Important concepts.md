@@ -122,15 +122,15 @@ void main() {
 
 
 ใน Dart จะต่างจาก Java หรือ C++ ตรงที่ไม่มีคีย์เวิร์ด public protected และ private หากตัวระบุขึ้นต้นด้วยขีดล่าง (_) จะถูกกำหนดเป็น private 
-#### Example
+#### Example : 1
 ```dart
 class Point {
-  int _x = 0;
-  int _y = 0;
+  int _x = 0; //กำหนดให้ x เป็น private
+  int _y = 0; //กำหนดให้ ั เป็น private
 
-  Point({int x = 0, int y = 0}) {
+  Point({int x = 0, int y = 0}) { //c
     this._x = x;
-    this._y = y;
+    this._y = y; 
   }
   show() {
     print('Point(x=$_x,y=$_y)');
@@ -149,3 +149,4 @@ void main() {
 Point(x=10,y=20)
 ```
 
+#### Example : 2 จะพยายามเข้าถึง _x ฟิลด์ _y ส่วนตัว ในฟังก์ชัน main()
