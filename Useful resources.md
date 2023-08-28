@@ -47,11 +47,11 @@
 
   ![Logo](https://m.media-amazon.com/images/I/41YMNzaa5-L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg)
 
-  - [Dart Apprentice: Beyond the Basics](https://www.kodeco.com/books/dart-apprentice-beyond-the-basics)
+  - [Data Structures & Algorithms in Darts](https://www.kodeco.com/books/dart-apprentice-beyond-the-basics)
     
-    by Jonathan Sande
+    by Jonathan Sande, Vincent Ngo, and Kelvin Lau
     
-    เป็นหนังสือเล่มที่สอง ที่จะรวบรวมแนวคิดสำคัญที่นอกเหนือจากพื้นฐานทั้งหมด
+    เป็นหนังสือที่จะเพื่มทักษะการเขียนโปรแกรม และให้ความรู้เรื่อง การสร้างสแต็ก คิว ต้นไม้ กราฟ การเรียงลำดับ และค้นหาอัลกอริธึมที่มีประสิทธิภาพตั้งแต่เริ่มต้น
 
     
 
