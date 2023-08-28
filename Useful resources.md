@@ -39,13 +39,11 @@
 
   ![Logo](https://m.media-amazon.com/images/I/41muc5c01ML._SX218_BO1,204,203,200_QL40_FMwebp_.jpg)
 
-  - Dart Apprentice: Beyond the Basics
+  - [Dart Apprentice: Beyond the Basics](https://www.kodeco.com/books/dart-apprentice-beyond-the-basics)
     
-
-
-
     by Jonathan Sande
-    Beyond the Basics is the second of a two-book series that will teach you all the important concepts you need to master this powerful and versatile language.
+    
+    เป็นเล่มที่สองของหนังสือ ที่จะรวบรวมแนวคิดสำคัญที่นอกเหนือจากพื้นฐานทั้งหมด
 
 
   [Learning Dart ](https://riptutorial.com/Download/dart.pdf)
