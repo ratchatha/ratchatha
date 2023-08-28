@@ -112,7 +112,7 @@ main() {
 
 ### Top-level functions 
 เป็นฟังก์ชันในระดับสูงสุดของโปรแกรมจะอยู่ด้านบนสุดของลำดับชั้นของคลาสหรือฟังก์ชัน และสามารถสร้างฟังก์ชันที่เชื่อมโยงกับ Class หรือ Object ได้ เช่น ฟังก์ชัน main() 
-และเราสามารถเขียนฟังก์ชันระดับบนสุดอีกฟังก์ชันหนึ่งไว้ที่ด้านบนของฟังก์ชัน main() ได้
+เราสามารถเขียนฟังก์ชันระดับบนสุดอีกฟังก์ชันหนึ่งไว้ที่ด้านบนของฟังก์ชัน main() ได้และ static methods กับ instance methods สามารถสร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
 
 #### Example 
 ```dart
@@ -120,7 +120,7 @@ void aTopLevelFunction() {} // A top-level function
 main() {
 Function anyFunctionInsideTopLevelFunction;
 
-  // Comparing top-level functions.
+  // เปรียบเทียบ top-level functions.
   anyFunctionInsideTopLevelFunction = aTopLevelFunction;
   if (aTopLevelFunction == anyFunctionInsideTopLevelFunction) {
     print('A top level function is same as any function '
@@ -128,31 +128,13 @@ Function anyFunctionInsideTopLevelFunction;
   }
 }
 ```
+>จากตัวอย่างเป็นการสร้างฟังก์ชันไว้นอก ฟังก์ชัน main()  และกำหนดค่าฟังก์ชันใน main() ที่ชื่อ anyFunctionInsideTopLevelFunction ให้เป็น aTopLevelFunction หรือฟังก์ชันระดับสูงสุด และทำการเปรียบเทียบ
 
 - Output
 
 ```dart
 A top level function is same as any function  inside a top-level function.
 ```
-
-### Top-level variables 
-ในภาษา Dart คือตัวแปรที่ประกาศที่ด้านนอกของคลาสและฟังก์ชัน ซึ่งอยู่นอกเหนือจากเนื้อหาของคลาสหรือฟังก์ชัน โดยตัวแปรเหล่านี้สามารถเข้าถึงได้ทุกที่ในโปรแกรม แต่ไม่ได้เชื่อมโยงกับคลาสหรืออ็อบเจ็กต์ใดๆ 
-#### Example
-```dart
-var myVariable = 42; // Top-level variables 
-
-void main() {
-  print(myVariable);
-}
-```
-- Output
-  
-```dart
-42
-```
->จากตัวอย่างเราจะสามารถเรียกตัวแปรนอก main() ได้โดยที่ไม่จำเป็นต้องเขียนฟังก์ชันหรือคลาส และไม่ต้องมีการสร้างอ็อบเจ็กต์หรือคลาสอื่น 
-
-
 
 #### Example : สร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
 ```dart
@@ -167,12 +149,37 @@ void main() {
   outerFunction();
 }
 ```
+
+
 - Output
   
 ```dart
 Outer function
 Inner function
 ```
+
+
+### Top-level variables 
+ในภาษา Dart คือตัวแปรที่ประกาศที่ด้านนอกของคลาสและฟังก์ชัน ซึ่งอยู่นอกเหนือจากเนื้อหาของคลาสหรือฟังก์ชัน โดยตัวแปรเหล่านี้สามารถเข้าถึงได้ทุกที่ในโปรแกรม แต่ไม่ได้เชื่อมโยงกับคลาสหรืออ็อบเจ็กต์ใดๆ 
+#### Example
+```dart
+var myVariable = 42; // Top-level variables 
+
+void main() {
+  print(myVariable);
+}
+```
+>จากตัวอย่างเราจะสามารถเรียกตัวแปรนอก main() ได้โดยที่ไม่จำเป็นต้องเขียนฟังก์ชันหรือคลาส และไม่ต้องมีการสร้างอ็อบเจ็กต์หรือคลาสอื่น 
+
+- Output
+  
+```dart
+42
+```
+
+
+
+
 
 
 ### Access Modifiers 
