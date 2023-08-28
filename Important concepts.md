@@ -123,11 +123,11 @@ void main() {
 
 ใน Dart จะต่างจาก Java หรือ C++ ตรงที่ไม่มีคีย์เวิร์ด public protected และ private หากตัวระบุขึ้นต้นด้วยขีดล่าง (_) จะถูกกำหนดเป็น private 
 #### Example
-`dart
+```dart
 //_Test is a private class as we have defined it using _
 class _Test{
 //_Hello() is a private method as we have defined it using _
 	_Hello(){
 	}
 }
-`
+```
