@@ -247,4 +247,6 @@ Point(x=10,y=20)
 Point(x=100,y=200)
 ```
 
-ใน Dartจะมีความเป็น private ที่ระดับเดียวกับ library มากกว่าระดับ class การเพิ่ม (_) ให้กับตัวแปรจะทำให้ library เป็นแบบ private ไม่ใช่คลาสแบบ private
+ใน Dart จะมีความเป็น private ที่ระดับเดียวกับ library มากกว่าระดับ class 
+
+การเพิ่ม (_) ให้กับตัวแปรจะทำให้ library เป็นแบบ private ไม่ใช่คลาสแบบ private
