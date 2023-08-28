@@ -60,8 +60,8 @@ John
 #### Example 
 ```dart
 void main() {
-  String name = "John";
-  int age = 30;
+  var name = " John"; 
+  var age = 30;
   print(name);
   print(age);
 }
@@ -71,4 +71,4 @@ void main() {
 ``` dart
 John
 30
-
+จากตัวอย่างจะมีการกำหนดประเภทข้อมูลเป็น var คือตัวแปรที่ไม่ระบุชนิดข้อมูลตอนประกาศตัวแปร และจะสามารรู้ประเภทข้อมูลได้ตอนที่เรากำหนดค่า
