@@ -13,13 +13,15 @@ Dart เวอร์ชัน 2.12 ขึ้นไปที่เปิดใช
     print(name);  
   }
 ```
+>จากตัวอย่างจะทำให้เกิดการ runtime error หากต้องการระบุว่าตัวแปรอาจมีค่าเป็น null จะต้องเพื่มเครื่องหมายคำถาม ? ไปที่ประเภทข้อมูล
+
 - Output
   
 ``` dart
 Error: Non-nullable variable 'name' must be assigned before it can be used.
 ```
 
->จากตัวอย่างจะทำให้เกิดการ runtime error หากต้องการระบุว่าตัวแปรอาจมีค่าเป็น null จะต้องเพื่มเครื่องหมายคำถาม ? ไปที่ประเภทข้อมูล 
+ 
 
 ### Example 
 ```dart
@@ -28,6 +30,8 @@ Error: Non-nullable variable 'name' must be assigned before it can be used.
     print(name);  
   }
 ```
+>จากตัวอย่างมีการเพื่มเครื่องหมาย ? หลังประเภทข้อมูล ทำให้ค่าของ name สามารถเป็น null ได้และจะไม่เกิดการ runtime error
+
 - Output
   
 ``` dart
