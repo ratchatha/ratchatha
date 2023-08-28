@@ -118,7 +118,8 @@ Function anyFunctionInsideTopLevelFunction;
   }
 }
 ```
--Output
+
+- Output
 
 ```dart
 A top level function is same as any function  inside a top-level function.
