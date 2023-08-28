@@ -252,9 +252,44 @@ Point(x=100,y=200)
 
 เพื่อป้องกันไม่ให้ฟังก์ชันอื่นเข้าถึงฟิลด์ที่เป็น private ของ class Point จะต้องสร้าง library ใหม่และวางคลาสไว้ในนั้น
 > 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กักับไฟล์
+  
+```dart
+class Point {
+  int _x = 0;
+  int _y = 0;
 
+  Point({int x = 0, int y = 0}) {
+    this._x = x;
+    this._y = y;
+  }
+  show() {
+    print('Point(x=$_x,y=$_y)');
+  }
+}
+```
 
 > 2.  import point.dart library ลงใน main.dart เพื่อให้สามารถอ้างอิงถึง class Point
 
+```dart
+import 'point.dart';
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+}
+```
 
 >  3.  หากพยายามแก้ไขหรือเข้าถึงตัวแปร _x และ_y จาก main.dart จะเกิด error
+
+```dart
+import 'point.dart';
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+
+  // errors
+  p1._x = 100;
+  p1._y = 200;
+}
+```
