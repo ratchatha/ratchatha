@@ -34,5 +34,7 @@
   
     by Jonathan Sande
 
+    เป็นหนังสือสือที่จะสอนแนวคิดสำคัญเกี่ยวกับภาษา Dart
+
 
   [Learning Dart ](https://riptutorial.com/Download/dart.pdf)
