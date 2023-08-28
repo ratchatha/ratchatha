@@ -412,16 +412,23 @@ https://www.tutorialandexample.com/dart-important-concepts
 
 https://benzneststudios.com/blog/dart/hello-sound-null-safety-in-dart/
 
-https://www.youtube.com/watch?v=TF-TBsgIErY&list=PLjxrf2q8roU0Net_g1NT5_vOO3s_FR02J&t=124s
+https://dart.dev/language/variables#null-safety
 
 https://dart.dev/language/type-system
 
 https://dart.dev/language/type-system#type-inference
 
+https://www.youtube.com/watch?v=TF-TBsgIErY&list=PLjxrf2q8roU0Net_g1NT5_vOO3s_FR02J&t=124s
+
 https://www.geeksforgeeks.org/dart-generics/
 
 https://sanjibsinha.com/top-level-functions-in-dart/
 
+https://news.dartlang.org/2012/09/simplify-your-constructors-and-top.html
 
+https://www.darttutorial.org/dart-tutorial/dart-private-fields/
 
+https://www.geeksforgeeks.org/access-modifiers-in-python-public-private-and-protected/
+
+https://dart.dev/language/error-handling
 
