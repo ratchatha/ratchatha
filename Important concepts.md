@@ -412,6 +412,16 @@ https://www.tutorialandexample.com/dart-important-concepts
 
 https://benzneststudios.com/blog/dart/hello-sound-null-safety-in-dart/
 
-https://astronut1911.medium.com/typescript-type-annotations-%E0%B8%81%E0%B8%B1%E0%B8%9A-type-inference-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%B5-8194c27e1e3d
+https://www.youtube.com/watch?v=TF-TBsgIErY&list=PLjxrf2q8roU0Net_g1NT5_vOO3s_FR02J&t=124s
 
-https://dev.to/iporsut/go-variable-type-and-type-inference-3no4
+https://dart.dev/language/type-system
+
+https://dart.dev/language/type-system#type-inference
+
+https://www.geeksforgeeks.org/dart-generics/
+
+https://sanjibsinha.com/top-level-functions-in-dart/
+
+
+
+
