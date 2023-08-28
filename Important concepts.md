@@ -215,3 +215,20 @@ Point(x=10,y=20)
 ```
 
 #### Example : 2 พยายามเข้าถึง ฟิลด์ _x และ ฟิลด์ _y ที่เป็น private ในฟังก์ชัน main()
+```dart
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+
+  p1._x = 100;
+  p1._y = 200;
+  p1.show();
+}
+```
+
+- Output
+
+```dart
+Point(x=10,y=20)
+Point(x=100,y=200)
+```
