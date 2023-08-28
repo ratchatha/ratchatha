@@ -28,7 +28,7 @@
 ## Book about Dart
   หัวข้อนี้จะเป็นเกี่ยวกับหนังสือเกี่ยวภาษา Dart
   
-    ![Logo](https://m.media-amazon.com/images/I/51B7z49UKQL._AC_UF350,350_QL50_.jpg)
+  ![Logo](https://m.media-amazon.com/images/I/51B7z49UKQL._AC_UF350,350_QL50_.jpg)
   
   - [Dart Apprentice: Fundamentals](https://www.kodeco.com/books/dart-apprentice-fundamentals)
   
@@ -37,11 +37,13 @@
     เป็นหนังสือสือที่จะสอนแนวคิดสำคัญเกี่ยวกับภาษา Dart
 
 
-    Dart Apprentice: Beyond the Basics
+![Logo](https://m.media-amazon.com/images/I/51LckOTRlrL._AC_UF1000,1000_QL80_.jpg)
+
+    - Dart Apprentice: Beyond the Basics
     
     by Jonathan Sande
 
-Dart Apprentice: Beyond the Basics is the second of a two-book series that will teach you all the important concepts you need to master this powerful and versatile language.
+    Beyond the Basics is the second of a two-book series that will teach you all the important concepts you need to master this powerful and versatile language.
 
 
   [Learning Dart ](https://riptutorial.com/Download/dart.pdf)
