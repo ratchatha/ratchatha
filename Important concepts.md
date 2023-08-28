@@ -254,7 +254,7 @@ Point(x=100,y=200)
 #### Example : วิธีการป้องกันการเข้าถึงของฟิลด์ที่เป็น private
 
 > 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กักับไฟล์
->
+
 ```dart
 class Point {
   int _x = 0;
@@ -271,7 +271,7 @@ class Point {
 ```
 
 > 2.  import point.dart library ลงใน main.dart เพื่อให้สามารถอ้างอิงถึง class Point
->
+
 ```dart
 import 'point.dart';
 
@@ -282,7 +282,7 @@ void main() {
 ```
 
 >  3.  หากพยายามแก้ไขหรือเข้าถึงตัวแปร _x และ_y จาก main.dart จะเกิด error
->
+
 ```dart
 import 'point.dart';
 
