@@ -1,11 +1,11 @@
 # Important concepts
 ใน tutorial นี้เราจะมาดูเรื่องแนวคิดที่สำคัญของ Dart  โดยที่ภาษา Dart เป็นภาษาโปรแกรมที่มีแนวคิดแบบ Object-Oriented Programming (OOP) ที่ให้ความสำคัญกับการจัดการกับ Object และ Class และใช้ในสร้าง Applications หรือ Project อื่นๆ และจะต้องคำนึงถึงข้อเท็จจริงและแนวคิดดังนี้
+
 ## Objects & Class
 ใน Dart นั้นทุกอย่างคือวัตถุ และวัตถุทั้งหมดเป็น instance ของ class ซึ่งรวมถึงตัวเลข ฟังก์ชัน และค่าว่างถือเป็นวัตถุ อ็อบเจ็กต์ทั้งหมดจะสืบทอดมาจากคลาส Object ยกเว้นค่า null ถ้าหากใช้ sound null safety
 
 ## Null Safety
 Dart เวอร์ชัน 2.12 ขึ้นไปที่เปิดใช้งาน null safety เมื่อประกาศตัวแปรจะต้องระบุว่าตัวแปรนั้นจะมีค่า null ซึ่งหมายความว่าตัวแปรไม่สามารถมีค่าว่างได้ 
-
 ### Example  
 ```dart
   void main() {
@@ -33,8 +33,8 @@ Error: Non-nullable variable 'name' must be assigned before it can be used.
 ``` dart
 null
 ```
-## Type Annotations & Type Inference
 
+## Type Annotations & Type Inference
 ### Type Annotations
 คือภาษาที่ต้องมีการประกาศ และบอกว่าตัวแปรนี้จะเป็นข้อมูลประเภทไหนซึ่งตัวเราเองจะต้องกำหนดว่าตัวแปร ฟังก์ชัน วัตถุ นั้นมี type เป็นอะไร 
 #### Example 
@@ -73,6 +73,25 @@ John
 30
 ```
 จากตัวอย่างจะมีการกำหนดประเภทข้อมูลเป็น var คือตัวแปรที่ไม่ระบุชนิดข้อมูลตอนประกาศตัวแปร และจะสามารรู้ประเภทข้อมูลได้ตอนที่เรากำหนดค่า
+
 ## Dart supports
 ### Generic Type 
 คือการระบุ Data type ของตัวแปรที่จะใช้ใน Class หรือ Method เช่น List<"int"> หรือ List<"Object"> จะเป็นวัตถุหรือประเภทชนิดข้อมูลใดก็ได้
+#### Example 
+```dart
+main() { 
+  Set <int> SetEx = new Set <int>(); 
+  SetEx.add(10); 
+  SetEx.add(20); 
+  SetEx.add(50);
+   
+  // Already added once, hence wont be added
+  SetEx.add(20); 
+    
+  // iterating across Set SetEx 
+  for (int element in SetEx) { 
+     print(element); 
+  } 
+}
+```
+
