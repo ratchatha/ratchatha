@@ -37,7 +37,7 @@
     เป็นหนังสือสือที่จะสอนแนวคิดสำคัญเกี่ยวกับภาษา Dart
 
 
-![Logo](https://m.media-amazon.com/images/I/51LckOTRlrL._AC_UF1000,1000_QL80_.jpg)
+![Logo]([https://m.media-amazon.com/images/I/51LckOTRlrL._AC_UF1000,1000_QL80_.jpg](https://m.media-amazon.com/images/I/41muc5c01ML._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_PIStarRatingTHREEANDHALF%2CBottomLeft%2C360%2C-6_SR600%2C315_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg))
 
     - Dart Apprentice: Beyond the Basics
     
