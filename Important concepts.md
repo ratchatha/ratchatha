@@ -117,6 +117,30 @@ void main() {
 ```
 จากตัวอย่างเราจะสามารถเรียกตัวแปรนอก main() ได้โดยที่ไม่จำเป็นต้องเขียนฟังก์ชันหรือคลาส และไม่ต้องมีการสร้างอ็อบเจ็กต์หรือคลาสอื่น 
 
+
+และ static methods กับ instance methods สามารถสร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
+
+#### Example : สร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
+```dart
+void outerFunction() {
+  void innerFunction() {
+    print("Inner function");
+  }
+  print("Outer function");
+  innerFunction();
+}
+void main() {
+  outerFunction();
+}
+```
+- Output
+  
+```dart
+Outer function
+Inner function
+```
+
+
 ### Access Modifiers 
 คือการกำหนดระดับในการเข้าถึงของ คลาส แอตทริบิวต์ เมธอด โดยมีประโยชน์ในเรื่องของสิทธิในการเข้าใช้งาน และการซ้อนข้อมูล
 
