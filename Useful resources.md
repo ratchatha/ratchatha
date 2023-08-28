@@ -30,7 +30,7 @@
   
   ![Logo](https://m.media-amazon.com/images/I/51B7z49UKQL._AC_UF350,350_QL50_.jpg)
   
-  - Dart Apprentice: Fundamentals
+  - [Dart Apprentice: Fundamentals](https://www.kodeco.com/books/dart-apprentice-fundamentals)
   
     by Jonathan Sande
 
