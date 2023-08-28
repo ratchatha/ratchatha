@@ -108,7 +108,6 @@ void main() {
   print(myVariable);
 }
 ```
-
 - Output
   
 ```dart
