@@ -80,18 +80,21 @@ John
 #### Example 
 ```dart
 main() { 
-  Set <int> SetEx = new Set <int>(); 
-  SetEx.add(10); 
-  SetEx.add(20); 
-  SetEx.add(50);
-   
-  // Already added once, hence wont be added
-  SetEx.add(20); 
+  List<int> listEx = <int>[]; // ส่วนของการระบุประเภทข้อมูลของ List
+  listEx.add(10); 
+  listEx.add(20); 
+  listEx.add(50); 
     
-  // iterating across Set SetEx 
-  for (int element in SetEx) { 
+  for (int element in listEx) { 
      print(element); 
   } 
 }
+```
+- Output
+  
+``` dart
+10
+20
+50
 ```
 
