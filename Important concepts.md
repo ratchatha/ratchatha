@@ -215,7 +215,21 @@ Point(x=10,y=20)
 ```
 
 #### Example : 2 พยายามเข้าถึง ฟิลด์ _x และ ฟิลด์ _y ที่เป็น private ในฟังก์ชัน main()
+
 ```dart
+class Point {
+  int _x = 0; //กำหนดให้ x เป็น private
+  int _y = 0; //กำหนดให้ ั เป็น private
+
+  Point({int x = 0, int y = 0}) { //c
+    this._x = x;
+    this._y = y; 
+  }
+  show() {
+    print('Point(x=$_x,y=$_y)');
+  }
+}
+
 void main() {
   var p1 = Point(x: 10, y: 20);
   p1.show();
