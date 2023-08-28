@@ -98,4 +98,15 @@ main() {
 20
 50
 ```
+### Top-level variables 
+ในภาษา Dart คือตัวแปรที่ประกาศที่ด้านนอกของคลาสและฟังก์ชัน ซึ่งอยู่นอกเหนือจากเนื้อหาของคลาสหรือฟังก์ชัน โดยตัวแปรเหล่านี้สามารถเข้าถึงได้ทุกที่ในโปรแกรม แต่ไม่ได้เชื่อมโยงกับคลาสหรืออ็อบเจ็กต์ใดๆ
+#### Example
+```dart
+// Top-level.
+final worklist = new Queue();
+var compiler = new Compiler(worklist);
 
+main() {
+  compiler.compile();
+}
+```
