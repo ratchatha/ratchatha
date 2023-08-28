@@ -302,26 +302,29 @@ void main() {
 
 ```java
 class Point {
-  int _x = 0; //กำหนดให้ x เป็น private
-  int _y = 0; //กำหนดให้ ั เป็น private
+    private int x = 0; // กำหนดให้ x เป็น private
+    private int y = 0; // กำหนดให้ y เป็น private
 
-  Point({int x = 0, int y = 0}) { //c
-    this._x = x;
-    this._y = y; 
-  }
-  show() {
-    print('Point(x=$_x,y=$_y)');
-  }
+    Point(int x, int y) { // Constructor
+        this.x = x;
+        this.y = y;
+    }
+
+    void show() {
+        System.out.println("Point(x=" + x + ", y=" + y + ")");
+    }
 }
 
-void main() {
-  var p1 = Point(x: 10, y: 20);
-  p1.show();
+public class Main {
+    public static void main(String[] args) {
+        Point p1 = new Point(10, 20);
+        p1.show();
+    }
 }
 ```
 
 - Output
   
-```dart
+```java
 Point(x=10,y=20)
 ```
