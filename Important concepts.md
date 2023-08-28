@@ -142,3 +142,10 @@ void main() {
   p1.show();
 }
 ```
+
+- Output
+  
+```dart
+Point(x=10,y=20)
+```
+
