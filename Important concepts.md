@@ -34,6 +34,7 @@ Error: Non-nullable variable 'name' must be assigned before it can be used.
 null
 ```
 ## Type Annotations & Type Inference
+
 ### Type Annotations
 คือภาษาที่ต้องมีการประกาศ และบอกว่าตัวแปรนี้จะเป็นข้อมูลประเภทไหนซึ่งตัวเราเองจะต้องกำหนดว่าตัวแปร ฟังก์ชัน วัตถุ นั้นมี type เป็นอะไร 
 #### Example 
@@ -52,7 +53,22 @@ John
 30
 ```
 จากตัวอย่างจะเป็นการกำหนดประเภทข้อมูลไว้แล้ว String กับ int  
+
 ## Type Inference
 คือเป็นการปล่อยให้ตัว Dart จัดการเรื่อง type ว่าตัวแปร ฟังก์ชัน วัตถุ ให้เองโดยอัตโนมัติ
 โดยที่ compiler สามารถรู้ type ของข้อมูลได้โดยดูจาก literal หรือค่าคงที่ที่กำหนดให้กับตัวแปร
+#### Example 
+```dart
+void main() {
+  String name = "John";
+  int age = 30;
+  print(name);
+  print(age);
+}
+```
+- Output
+  
+``` dart
+John
+30
 
