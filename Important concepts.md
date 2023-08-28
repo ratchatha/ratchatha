@@ -328,3 +328,36 @@ public class Main {
 ```java
 Point(x=10,y=20)
 ```
+
+2. C++
+
+```c++
+#include <iostream>
+
+class Point {
+private:
+    int x = 0; // กำหนดให้ x เป็น private
+    int y = 0; // กำหนดให้ y เป็น private
+
+public:
+    Point(int x, int y) { // Constructor
+        this->x = x;
+        this->y = y;
+    }
+
+    void show() {
+        std::cout << "Point(x=" << x << ", y=" << y << ")" << std::endl;
+    }
+};
+
+int main() {
+    Point p1(10, 20);
+    p1.show();
+
+    return 0;
+}
+```
+
+```c++
+Point(x=10,y=20)
+```
