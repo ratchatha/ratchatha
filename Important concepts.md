@@ -410,5 +410,5 @@ Point(x=10,y=20)
 ## Reference
 https://www.tutorialandexample.com/dart-important-concepts
 https://benzneststudios.com/blog/dart/hello-sound-null-safety-in-dart/
-https://astronut1911.medium.com/typescript-type-annotations-%E0%B8%81%E0%B8%B1%E0%B8%9A-type-inference-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%B5-8194c27e1e3d
+https://astronut1911.medium.com/typescript-type-annotations-%E0%B8%81%E0%B8%B1%E0%B8%9A-type-inference-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%B5-8194c27e1e3d.<br>
 https://dev.to/iporsut/go-variable-type-and-type-inference-3no4
