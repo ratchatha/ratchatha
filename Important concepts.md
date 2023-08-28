@@ -6,7 +6,7 @@
 
 ## Null Safety
 Dart เวอร์ชัน 2.12 ขึ้นไปที่เปิดใช้งาน null safety เมื่อประกาศตัวแปรจะต้องระบุว่าตัวแปรนั้นจะมีค่า null ซึ่งหมายความว่าตัวแปรไม่สามารถมีค่าว่างได้ 
-### Example  
+### Example : สร้างตัวแปรโดยที่ไม่ได้กำหนดค่า
 ```dart
   void main() {
     String name;  
@@ -23,7 +23,7 @@ Error: Non-nullable variable 'name' must be assigned before it can be used.
 
  
 
-### Example 
+### Example : สร้างตัวแปรโดยที่ไม่ได้กำหนดค่าโดยการใช้ ?
 ```dart
   void main() {
     String? name;  // ประกาศตัวแปร name โดยระบุว่าอาจจะมีค่าเป็น null
@@ -41,7 +41,7 @@ null
 ## Type Annotations & Type Inference
 ### Type Annotations
 คือภาษาที่ต้องมีการประกาศ และบอกว่าตัวแปรนี้จะเป็นข้อมูลประเภทไหนซึ่งตัวเราเองจะต้องกำหนดว่าตัวแปร ฟังก์ชัน วัตถุ นั้นมี type เป็นอะไร 
-#### Example 
+#### Example : การสร้างตัวแปรและกำหนดชนิดข้อมูล 
 ```dart
 void main() {
   String name = "John";
@@ -63,7 +63,7 @@ John
 ## Type Inference
 คือเป็นการปล่อยให้ตัว Dart จัดการเรื่อง type ว่าตัวแปร ฟังก์ชัน วัตถุ ให้เองโดยอัตโนมัติ
 โดยที่ compiler สามารถรู้ type ของข้อมูลได้โดยดูจาก literal หรือค่าคงที่ที่กำหนดให้กับตัวแปร
-#### Example 
+#### Example : การสร้างตัวแปรแต่ไม่ได้กำหนดชนิดข้อมูล
 ```dart
 void main() {
   var name = " John"; 
@@ -86,7 +86,7 @@ John
 คุณลักษณะหรือความสามารถที่ Dart สนับสนุนหรือรองรับ และขอยกตัวอย่างที่สำคัญดังนี้
 ### Generic Type 
 คือการระบุ Data type ของตัวแปรที่จะใช้ใน Class หรือ Method เช่น List<"int"> หรือ List<"Object"> จะเป็นวัตถุหรือประเภทชนิดข้อมูลใดก็ได้
-#### Example 
+#### Example : กำหนดชนิดข้อมูลของ List
 ```dart
 main() { 
   List<int> listEx = <int>[]; // ส่วนของการระบุประเภทข้อมูลของ List
@@ -114,7 +114,7 @@ main() {
 เป็นฟังก์ชันในระดับสูงสุดของโปรแกรมจะอยู่ด้านบนสุดของลำดับชั้นของคลาสหรือฟังก์ชัน และสามารถสร้างฟังก์ชันที่เชื่อมโยงกับ Class หรือ Object ได้ เช่น ฟังก์ชัน main() 
 เราสามารถเขียนฟังก์ชันระดับบนสุดอีกฟังก์ชันหนึ่งไว้ที่ด้านบนของฟังก์ชัน main() ได้และ static methods กับ instance methods สามารถสร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
 
-#### Example 
+#### Example : เปรียบเทียบฟังก์ชันในระดับสูงสุด
 ```dart
 void aTopLevelFunction() {} // A top-level function
 main() {
