@@ -58,5 +58,7 @@
   
   
   - [Learning Dart ](https://riptutorial.com/Download/dart.pdf)
-    
   
+    by Stack Overflow contributors  
+    
+    เป็นหนังที่ไม่เป็นทางการและฟรีที่สร้างขึ้นเพื่อการศึกษา
