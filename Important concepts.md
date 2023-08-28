@@ -109,9 +109,8 @@ void main() {
 }
 ```
 
-```
 - Output
   
-``` dart
+```dart
 42
 ```
