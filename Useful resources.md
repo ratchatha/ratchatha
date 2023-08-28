@@ -47,7 +47,7 @@
 
   ![Logo](https://m.media-amazon.com/images/I/41YMNzaa5-L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg)
 
-  - [Data Structures & Algorithms in Darts](https://www.kodeco.com/books/dart-apprentice-beyond-the-basics)
+  - [Data Structures & Algorithms in Darts](https://www.kodeco.com/books/data-structures-algorithms-in-dart)
     
     by Jonathan Sande, Vincent Ngo, and Kelvin Lau
     
