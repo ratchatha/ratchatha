@@ -1,4 +1,4 @@
-![image](https://github.com/ratchatha/ratchatha/assets/141728801/a94ab725-c529-4f53-a6f0-881df117cc41)# Important concepts
+# Important concepts
 ใน tutorial นี้เราจะมาดูเรื่องแนวคิดที่สำคัญของ Dart  โดยที่ภาษา Dart เป็นภาษาโปรแกรมที่มีแนวคิดแบบ Object-Oriented Programming (OOP) ที่ให้ความสำคัญกับการจัดการกับ Object และ Class และใช้ในสร้าง Applications หรือ Project อื่นๆ และจะต้องคำนึงถึงข้อเท็จจริงและแนวคิดดังนี้
 
 ## Objects & Class
