@@ -1,11 +1,14 @@
-# Important concepts
+![image](https://github.com/ratchatha/ratchatha/assets/141728801/89eb493f-a7f1-4177-bcc5-6d8805a5dc72)# Important concepts
 ใน tutorial นี้เราจะมาดูเรื่องแนวคิดที่สำคัญของ Dart  โดยที่ภาษา Dart เป็นภาษาโปรแกรมที่มีแนวคิดแบบ Object-Oriented Programming (OOP) ที่ให้ความสำคัญกับการจัดการกับ Object และ Class และใช้ในสร้าง Applications หรือ Project อื่นๆ และจะต้องคำนึงถึงข้อเท็จจริงและแนวคิดดังนี้
 
 ## Objects & Class
-ใน Dart นั้นทุกอย่างคือวัตถุ และวัตถุทั้งหมดเป็น instance ของ class ซึ่งรวมถึงตัวเลข ฟังก์ชัน และค่าว่างถือเป็นวัตถุ อ็อบเจ็กต์ทั้งหมดจะสืบทอดมาจากคลาส Object ยกเว้นค่า null ถ้าหากใช้ sound null safety
+ใน Dart นั้นตัวแปร ตัวเลข ฟังก์ชัน และค่า null จะเป็นวัตถุ และวัตถุก็เป็น Instance ของ Class วัตถุเหล่านี้สืบทอดมาจากคลาส Object แต่ยกเว้นค่า Null ถ้าหากใช้ Sound Null Safety
+Sound Null Safety คือการป้องกันไม่ให้เกิดข้อผิดพลาดที่เป็นค่าว่าง ซึ่งเป็นสาเหตุที่ทำให้ข้อผิดพลาดระหว่างการรันโปรแกรม (runtime errors) 
+
 
 ## Null Safety
-Dart เวอร์ชัน 2.12 ขึ้นไปที่เปิดใช้งาน null safety เมื่อประกาศตัวแปรจะต้องระบุว่าตัวแปรนั้นจะมีค่า null ซึ่งหมายความว่าตัวแปรไม่สามารถมีค่าว่างได้ 
+คือ คุณสมบัติหนึ่งใน Dart ที่จะช่วยเพื่อป้องกันข้อผิดพลาดที่เกิดจากค่า Null ซึ่งช่วยให้สามารถตรวจจับข้อผิดพลาดที่เกิดจากค่า Null ได้ และฟีเจอร์นี้เรียกว่า "Sound Null Safety"
+ใน Dart เวอร์ชัน 2.12 ขึ้นไปที่เปิดใช้งาน null safety เมื่อประกาศตัวแปรจะต้องระบุว่าตัวแปรนั้นจะมีค่า null ซึ่งหมายความว่าตัวแปรไม่สามารถมีค่าว่างได้ 
 ### Example : สร้างตัวแปรโดยที่ไม่ได้กำหนดค่า
 ```dart
   void main() {
@@ -86,78 +89,55 @@ John
 คุณลักษณะหรือความสามารถที่ Dart รองรับมีตัวอย่างที่สำคัญดังนี้
 ### Generic Type 
 คือการระบุ Data type ของตัวแปรที่จะใช้ใน Class หรือ Method เช่น List<"int"> หรือ List<"Object"> จะเป็นวัตถุหรือประเภทชนิดข้อมูลใดก็ได้
-#### Example : กำหนดชนิดข้อมูลของ List
-```dart
-main() { 
-  List<int> listEx = <int>[]; // ส่วนของการระบุประเภทข้อมูลของ List
-  listEx.add(10); 
-  listEx.add(20); 
-  listEx.add(50); 
-    
-  for (int element in listEx) { 
-     print(element); 
-  } 
+#### Example : Generic Type
+```Dart
+class Box<T> {			
+  T value;
+  Box(this.value);
+}
+
+void main() {
+  var integerBox = Box<int>(42);
+  var stringBox = Box<String>("Hello, Dart!");
+
+  print(integerBox.value); // 42
+  print(stringBox.value); // "Hello, Dart!"
 }
 ```
->จากตัวอย่างจะเป็นการกำหนดประเภทข้อมูลของ List
+>จากตัวอย่างจะเป็นใช้ Generic Type โดยรับพารามิเตอร์ชื่อ T เป็นชนิดข้อมูลที่จะถูกใช้ในคลาส Box และ value; เป็นตัวแปรของคลาส Box ที่เก็บค่าของชนิดข้อมูลของ T
+ในฟังก์ชั่น main() จะสร้างออบเจ็กต์ชื่อว่า integerBox กับ stringBox และจะรับชนิดข้อมูลโดยจะใส่ใน <..> และ ส่งจะส่งพารามิเตอร์ไปให้กับ class Box 
+
 
 - Output
   
 ``` dart
-10
-20
-50
+42
+Hello, Dart!
 ```
 
 
 ### Top-level functions 
 เป็นฟังก์ชันในระดับสูงสุดของโปรแกรมจะอยู่ด้านบนสุดของลำดับชั้นของคลาสหรือฟังก์ชัน และสามารถสร้างฟังก์ชันที่เชื่อมโยงกับ Class หรือ Object ได้ เช่น ฟังก์ชัน main() 
-เราสามารถเขียนฟังก์ชันระดับบนสุดอีกฟังก์ชันหนึ่งไว้ที่ด้านบนของฟังก์ชัน main() ได้และ static methods กับ instance methods สามารถสร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
+เราสามารถเขียนฟังก์ชันระดับบนสุดอีกฟังก์ชันหนึ่งไว้ที่ด้านบนของฟังก์ชัน main() ได้
 
 #### Example : เปรียบเทียบฟังก์ชันในระดับสูงสุด
-```dart
-void aTopLevelFunction() {} // A top-level function
-main() {
-Function anyFunctionInsideTopLevelFunction;
-
-  // เปรียบเทียบ top-level functions.
-  anyFunctionInsideTopLevelFunction = aTopLevelFunction;
-  if (aTopLevelFunction == anyFunctionInsideTopLevelFunction) {
-    print('A top level function is same as any function '
-        ' inside a top-level function.');
-  }
-}
-```
->จากตัวอย่างเป็นการสร้างฟังก์ชันไว้นอก ฟังก์ชัน main()  และกำหนดค่าฟังก์ชันใน main() ที่ชื่อ anyFunctionInsideTopLevelFunction ให้เป็น aTopLevelFunction หรือฟังก์ชันระดับสูงสุด และทำการเปรียบเทียบ
-
-- Output
-
-```dart
-A top level function is same as any function  inside a top-level function.
-```
-
-#### Example : สร้างฟังก์ชันไว้ภายในฟังก์ชัน local functions
-```dart
-void outerFunction() {
-  void innerFunction() {
-    print("Inner function");
-  }
-  print("Outer function");
-  innerFunction();
+```Dart
+void sayHello() { // A top-level function
+  print("Hello, world!");
 }
 void main() {
-  outerFunction();
+  sayHello(); // "Hello, world!"
 }
+
 ```
+>จากตัวอย่าง void sayHello() เป็น top-level function จะประกาศด้านบนสุดของโค้ด และในฟังก์ชัน main จะเรียกใช้ void sayHello() โดยไม่จำเป็นต้องสร้างอินสแตนซ์ของคลาส  
 
 
 - Output
-  
-```dart
-Outer function
-Inner function
-```
 
+```dart
+Hello, world!
+```
 
 ### Top-level variables 
 ในภาษา Dart คือตัวแปรที่ประกาศที่ด้านนอกของคลาสและฟังก์ชัน ซึ่งอยู่นอกเหนือจากเนื้อหาของคลาสหรือฟังก์ชัน โดยตัวแปรเหล่านี้สามารถเข้าถึงได้ทุกที่ในโปรแกรม แต่ไม่ได้เชื่อมโยงกับคลาสหรืออ็อบเจ็กต์ใดๆ 
@@ -191,7 +171,7 @@ void main() {
 ```dart
 class Point {
   int _x = 0; //กำหนดให้ x เป็น private
-  int _y = 0; //กำหนดให้ ั เป็น private
+  int _y = 0; //กำหนดให้ ั y เป็น private
 
   Point({int x = 0, int y = 0}) { //c
     this._x = x;
