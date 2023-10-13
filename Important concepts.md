@@ -194,89 +194,6 @@ void main() {
 Point(x=10,y=20)
 ```
 ---
-
-#### Example : 2 พยายามเข้าถึง ฟิลด์ _x และ ฟิลด์ _y ที่เป็น private ในฟังก์ชัน main()
-
-```dart
-class Point {
-  int _x = 0; //กำหนดให้ x เป็น private
-  int _y = 0; //กำหนดให้ y เป็น private
-
-  Point({int x = 0, int y = 0}) { //c
-    this._x = x;
-    this._y = y; 
-  }
-  show() {
-    print('Point(x=$_x,y=$_y)');
-  }
-}
-
-void main() {
-  var p1 = Point(x: 10, y: 20);
-  p1.show();
-
-  p1._x = 100; // เป็นการแก้ไขตัวแปร x ที่เป็น private
-  p1._y = 200; // เป็นการแก้ไขตัวแปร y ที่เป็น private
-  p1.show();
-}
-```
->จากตัวอย่างเป็นการที่พยายามเข้าถึงตัวแปรที่เป็นแบบ private จึงทำให้เปลี่ยนแปลงค่าภายในตัวแปร x กับ y
-- Output
-
-```dart
-Point(x=10,y=20)
-Point(x=100,y=200)
-```
-
-ใน Dart จะมีความเป็น private ที่ระดับเดียวกับ library มากกว่าระดับ class การเพิ่ม (_) ให้กับตัวแปรจะทำให้ library เป็นแบบ private ไม่ใช่คลาสแบบ private
-
-เพื่อป้องกันไม่ให้ฟังก์ชันอื่นเข้าถึงฟิลด์ที่เป็น private ของ class Point จะต้องสร้าง library ใหม่และวางคลาสไว้ในนั้น
-
-#### Example : วิธีการป้องกันการเข้าถึงของฟิลด์ที่เป็น private
-
-> 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กับไฟล์
-
-```dart
-class Point {
-  int _x = 0;
-  int _y = 0;
-
-  Point({int x = 0, int y = 0}) {
-    this._x = x;
-    this._y = y;
-  }
-  show() {
-    print('Point(x=$_x,y=$_y)');
-  }
-}
-```
-
-> 2.  import point.dart library ลงใน main.dart เพื่อให้สามารถอ้างอิงถึง class Point
-
-```dart
-import 'point.dart';
-
-void main() {
-  var p1 = Point(x: 10, y: 20);
-  p1.show();
-}
-```
-
->  3.  หากพยายามแก้ไขหรือเข้าถึงตัวแปร _x และ_y จาก main.dart จะเกิด error
-
-```dart
-import 'point.dart';
-
-void main() {
-  var p1 = Point(x: 10, y: 20);
-  p1.show();
-
-  // errors
-  p1._x = 100;
-  p1._y = 200;
-}
-```
-
 ### __เปรียบเทียบการเขียนในภาษาอื่นๆ__
 
 1. Java
@@ -374,6 +291,91 @@ Point(x=10,y=20)
 
 > โดยตัวอย่างทั้งสามตัวนี้ แสดงให้เห็นว่าภาษา Java กับ C++ จะมีความคล้ายคลึงกันมาก
 > และจะมีคีย์เวิร์ด private แต่ในทางกลับกันภาษา Dart กับ Python นั้นจะไม่มีคีย์เวิร์ดแต่จะแทนด้วยเครื่องหมาย (_)
+> 
+
+#### Example : 2 พยายามเข้าถึง ฟิลด์ _x และ ฟิลด์ _y ที่เป็น private ในฟังก์ชัน main()
+
+```dart
+class Point {
+  int _x = 0; //กำหนดให้ x เป็น private
+  int _y = 0; //กำหนดให้ y เป็น private
+
+  Point({int x = 0, int y = 0}) { //c
+    this._x = x;
+    this._y = y; 
+  }
+  show() {
+    print('Point(x=$_x,y=$_y)');
+  }
+}
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+
+  p1._x = 100; // เป็นการแก้ไขตัวแปร x ที่เป็น private
+  p1._y = 200; // เป็นการแก้ไขตัวแปร y ที่เป็น private
+  p1.show();
+}
+```
+>จากตัวอย่างเป็นการที่พยายามเข้าถึงตัวแปรที่เป็นแบบ private จึงทำให้เปลี่ยนแปลงค่าภายในตัวแปร x กับ y
+- Output
+
+```dart
+Point(x=10,y=20)
+Point(x=100,y=200)
+```
+
+ใน Dart จะมีความเป็น private ที่ระดับเดียวกับ library มากกว่าระดับ class การเพิ่ม (_) ให้กับตัวแปรจะทำให้ library เป็นแบบ private ไม่ใช่คลาสแบบ private
+
+เพื่อป้องกันไม่ให้ฟังก์ชันอื่นเข้าถึงฟิลด์ที่เป็น private ของ class Point จะต้องสร้าง library ใหม่และวางคลาสไว้ในนั้น
+
+#### Example : วิธีการป้องกันการเข้าถึงของฟิลด์ที่เป็น private
+
+> 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กับไฟล์
+
+```dart
+class Point {
+  int _x = 0;
+  int _y = 0;
+
+  Point({int x = 0, int y = 0}) {
+    this._x = x;
+    this._y = y;
+  }
+  show() {
+    print('Point(x=$_x,y=$_y)');
+  }
+}
+```
+
+> 2.  import point.dart library ลงใน main.dart เพื่อให้สามารถอ้างอิงถึง class Point
+
+```dart
+import 'point.dart';
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+}
+```
+
+>  3.  หากพยายามแก้ไขหรือเข้าถึงตัวแปร _x และ_y จาก main.dart จะเกิด error
+
+```dart
+import 'point.dart';
+
+void main() {
+  var p1 = Point(x: 10, y: 20);
+  p1.show();
+
+  // errors
+  p1._x = 100;
+  p1._y = 200;
+}
+```
+
+
 
 ## Error Handling
 กระบวนการในการจัดการกับข้อผิดพลาดหรือข้อบกพร่องที่อาจเกิดขึ้นในโปรแกรมในระหว่างการเรียกใช้โค้ด
