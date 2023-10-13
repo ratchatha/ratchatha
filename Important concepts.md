@@ -83,7 +83,7 @@ John
 
 
 ## Dart supports
-คุณลักษณะหรือความสามารถที่ Dart สนับสนุนหรือรองรับมีตัวอย่างที่สำคัญดังนี้
+คุณลักษณะหรือความสามารถที่ Dart รองรับมีตัวอย่างที่สำคัญดังนี้
 ### Generic Type 
 คือการระบุ Data type ของตัวแปรที่จะใช้ใน Class หรือ Method เช่น List<"int"> หรือ List<"Object"> จะเป็นวัตถุหรือประเภทชนิดข้อมูลใดก็ได้
 #### Example : กำหนดชนิดข้อมูลของ List
@@ -254,7 +254,7 @@ Point(x=100,y=200)
 
 #### Example : วิธีการป้องกันการเข้าถึงของฟิลด์ที่เป็น private
 
-> 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กักับไฟล์
+> 1.  ให้สร้างไฟล์ใหม่ที่เรียกว่า point.dart และเพิ่ม class Point ให้กับไฟล์
 
 ```dart
 class Point {
@@ -371,11 +371,11 @@ Point(x=10,y=20)
 ```python
 class Point:
     def __init__(self, x, y):  # Constructor
-        self.x = x
-        self.y = y
+        self._x = x
+        self._y = y
 
     def show(self):
-        print(f"Point(x={self.x}, y={self.y})")
+        print(f"Point(x={self._x}, y={self._y})")
 
 def main():
     p1 = Point(10, 20)
@@ -407,6 +407,14 @@ Point(x=10,y=20)
 -  #### Runtime error
    ข้อผิดพลาดรันไทม์ส่งผลให้เกิดข้อยกเว้นในขณะการเรียกใช้โค้ด
 
+---
+
+## Link Slide
+https://drive.google.com/drive/folders/1FZ-TKBhbYUiTphMKC0PyheA8DwHemKjA?usp=sharing
+
+## Link Video
+https://youtu.be/7uuieuLawsE
+
 ## Reference
 https://www.tutorialandexample.com/dart-important-concepts
 
@@ -435,7 +443,4 @@ https://www.geeksforgeeks.org/access-modifiers-in-c/
 https://www.geeksforgeeks.org/access-modifiers-in-python-public-private-and-protected/
 
 https://dart.dev/language/error-handling
-
-###
-file:///C:/Users/ratch/OneDrive/%E0%B9%80%E0%B8%94%E0%B8%AA%E0%B8%81%E0%B9%8C%E0%B8%97%E0%B9%87%E0%B8%AD%E0%B8%9B/Haji/PL/Important%20Concepts%20V2.pdf
 
