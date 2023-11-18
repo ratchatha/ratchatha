@@ -1,5 +1,5 @@
 ```
-mkdir node-express
+mkdir car-rental
 ```
 
 
