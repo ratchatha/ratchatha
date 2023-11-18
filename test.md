@@ -1,4 +1,4 @@
-```bash
+```
 mkdir node-express
 ```
 
